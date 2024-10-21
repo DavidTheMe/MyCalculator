@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Layout with Erase and Restart Buttons</title>
+    <style>
+        /* Grid layout for the calculator */
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+            grid-gap: 10px; /* Gap between buttons */
+            max-width: 300px; /* Maximum width of the calculator */
+            margin: 0 auto; /* Center the calculator */
+        }
+
+        .calculator input, .calculator button {
+            padding: 20px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        /* Make the display span across all 4 columns */
+        .display {
+            grid-column: span 4;
+        }
+
+        /* Equal sign should span across two columns */
+        .equal {
+            grid-column: span 2;
+        }
+
+        /* Erase and Restart buttons */
+        .erase, .restart {
+            grid-column: span 2; /* Make them span across two columns */
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <!-- Display -->
+        <p id="currentNumText" class="display" ></p>
+
+        <!-- Number and operator buttons -->
+        <button onclick="numPressed(7)">7</button>
+        <button onclick="numPressed(8)">8</button>
+        <button onclick="numPressed(9)">9</button>
+        <button>/</button>
+
+        <button onclick="numPressed(4)">4</button>
+        <button onclick="numPressed(5)">5</button>
+        <button onclick="numPressed(6)">6</button>
+        <button>*</button>
+
+        <button onclick="numPressed(1)">1</button>
+        <button onclick="numPressed(2)">2</button>
+        <button onclick="numPressed(3)">3</button>
+        <button>-</button>
+
+        <button onclick="numPressed(0)">0</button>
+        <button onclick="backspace()">C</button>
+        <button class="equal">=</button>
+        <button>+</button>
+
+        <!-- Add the Erase and Restart buttons -->
+        <button class="restart" onclick="restartCalculator()">Restart</button>
+    </div>
+
+    <script src="js/script.js"></script> <!-- Reference to the external JavaScript file -->
+
+</body>
+</html>
