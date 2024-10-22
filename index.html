@@ -45,22 +45,22 @@
         <button onclick="numPressed(7)">7</button>
         <button onclick="numPressed(8)">8</button>
         <button onclick="numPressed(9)">9</button>
-        <button>/</button>
+        <button onclick="doButton('divide')">/</button>
 
         <button onclick="numPressed(4)">4</button>
         <button onclick="numPressed(5)">5</button>
         <button onclick="numPressed(6)">6</button>
-        <button>*</button>
+        <button onclick="doButton('multi')">*</button>
 
         <button onclick="numPressed(1)">1</button>
         <button onclick="numPressed(2)">2</button>
         <button onclick="numPressed(3)">3</button>
-        <button>-</button>
+        <button onclick="doButton('sub')">-</button>
 
         <button onclick="numPressed(0)">0</button>
         <button onclick="backspace()">C</button>
-        <button class="equal">=</button>
-        <button>+</button>
+        <button class="equal" onclick="equal()">=</button>
+        <button onclick="doButton('add')">+</button>
 
         <!-- Add the Erase and Restart buttons -->
         <button class="restart" onclick="restartCalculator()">Restart</button>
